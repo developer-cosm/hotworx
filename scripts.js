@@ -107,7 +107,111 @@ jQuery(document).ready(function(){
       <option rel="AU" value="VIC" >Victoria</option>
       <option rel="IR" value="GY" >Galway</option>`);   
   
+
+
+
+
+      let state_counter = 0;
+    $('.state-collection .w-dyn-item').each(function(i,item){
+            $(this).attr('data-id', state_counter);
+        let name = $(this).find('.name').text();
+        let state = $(this).find('.state').text();
+            let email_1 = $(this).find('.email-1').text();
+            let email_2 = $(this).find('.email-2').text();
+            let email_3 = $(this).find('.email-3').text();
+        $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name +'</option>');
+       state_counter++;
+    });
+    
+      
+    $('.australia-studio .w-dyn-item').each(function(i,item){
+        let name = $(this).find('.name').text();
+        let state = $(this).find('.state').text();
+            let email_1 = $(this).find('.email-1').text();
+            let email_2 = $(this).find('.email-2').text();
+            let email_3 = $(this).find('.email-3').text();      
+      
+        $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"   value="'+ name +'">'+ name +'</option>');
+    });   
+    
+    $('.ireland-studios .w-dyn-item').each(function(i,item){
+        let name = $(this).find('.name').text();
+        let state = $(this).find('.state').text();
+            let email_1 = $(this).find('.email-1').text();
+            let email_2 = $(this).find('.email-2').text();
+            let email_3 = $(this).find('.email-3').text();      
+        $('#contact-studio').append('<option rel="'+ state +'"  data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name +'</option>');
+    });
+    
+    
+    
+      //Form logic
+    var $supCat = $('#contact-country'),
+        $cat = $("#contact-state"),
+        $subcat = $("#contact-studio");     
   
+      $cat.prop("disabled", true);
+      $subcat.prop("disabled", true);
+      //$('#contact-studio').val('HOTWORX- Bartlett, TN');
+    $supCat.on("change",function(){
+            //alert('changed');
+      $subcat.find("option").hide();
+      $subcat.prop('selectedIndex',0);
+      $subcat.prop("disabled",true);
+      
+      $cat.find("option").hide();
+      $cat.prop('selectedIndex',0);
+      $cat.prop("disabled",false);
+      var _rel = $(this).val();
+      $cat.find("[rel~='"+_rel+"']").show();
+
+   });
+
+
+  $cat.on("change",function(){
+
+    $subcat.find("option").hide();
+    $subcat.prop('selectedIndex',0);
+    $subcat.prop("disabled",false);
+    var rel_cat = $(this).val();
+    $subcat.find("[rel~='"+rel_cat+"']").show();
+
+
+  });
+  $subcat.on("change", function(){
+    
+    $('.input_email1').remove();
+    $('.input_email2').remove();
+    $('.input_email3').remove();
+    
+      //console.log($(this).find(':selected').data('email1'));
+    let email1 = $(this).find(':selected').data('email1');
+    let email2 = $(this).find(':selected').data('email2');
+    let email3 = $(this).find(':selected').data('email3');
+    $('.contact-form-default').append('<input type="hidden" name="email1" class="input_email1" value="'+ email1 +'">');
+    $('.contact-form-default').append('<input type="hidden" name="email2" class="input_email2" value="'+ email2 +'">');
+    $('.contact-form-default').append('<input type="hidden" name="email3" class="input_email3" value="'+ email3 +'">');
+  })
+  //End form logic for contact form and free trial form
+  
+  //Single Location Phone format
+  var location_phone = $('.us-studio .location-phone').text();
+  if(location_phone){
+      location_phone = phoneFormatUsa(location_phone);
+      $('.us-studio .location-phone').text(location_phone); 
+  }
+  
+  let ireland_phone = $('.ireland-studio .location-phone').text();
+  
+  if(ireland_phone){
+      //ireland_phone = phoneFormatIre(ireland_phone);
+      
+    
+    ireland_phone = formatPhoneNumber(ireland_phone);
+    //alert(ireland_phone);
+    $('.ireland-studio .location-phone').text(ireland_phone);
+    
+  }    
   
   
   
