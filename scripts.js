@@ -195,6 +195,42 @@ jQuery(document).ready(function(){
   //End form logic for contact form and free trial form
   
   //Single Location Phone format
+
+   //US Phone Format
+    function phoneFormatUsa(phone) {
+      phone = phone.replace(/[^0-9]/g, '');
+      phone = phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
+      return phone;
+    } 
+
+    //Australia Phone Format
+    function phoneFormatAus(phone) {
+      phone = phone.replace(/[^0-9]/g, '');
+      phone = phone.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2 $3");
+      return phone;
+    }
+
+    //Ireland Phone Format
+    function phoneFormatIre(phone) {
+      phone = phone.replace(/[^0-9]/g, '');
+      //phone = phone.replace(/(\d{2})(\d{3)(\d{4})/, "($1) $2 $3");
+       
+      return phone;
+    }
+
+  function formatPhoneNumber(phoneNumberString) {
+    var cleaned = (phoneNumberString).replace(/\D/g, '')
+    var match = cleaned.match(/^(\d{2})(\d{3})(\d{4})$/)
+    if (match) {
+      return '(' + match[1] + ') ' + match[2]+' '+ match[3]
+    }
+    return null
+  }
+
+
+
+
+  
   var location_phone = $('.us-studio .location-phone').text();
   if(location_phone){
       location_phone = phoneFormatUsa(location_phone);
