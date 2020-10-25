@@ -146,7 +146,7 @@ jQuery(document).ready(function(){
     
     
       //Form logic
-    var $supCat = $('#contact-country'),
+    var $supCat = $('#Country'),
         $cat = $("#contact-state"),
         $subcat = $("#contact-studio");     
   
