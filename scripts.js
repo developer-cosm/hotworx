@@ -113,13 +113,14 @@ jQuery(document).ready(function(){
 
       let state_counter = 0;
     $('.state-collection .w-dyn-item').each(function(i,item){
-            $(this).attr('data-id', state_counter);
+        $(this).attr('data-id', state_counter);
         let name = $(this).find('.name').text();
         let state = $(this).find('.state').text();
-            let email_1 = $(this).find('.email-1').text();
-            let email_2 = $(this).find('.email-2').text();
-            let email_3 = $(this).find('.email-3').text();
-        $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name +'</option>');
+        let email_1 = $(this).find('.email-1').text();
+        let email_2 = $(this).find('.email-2').text();
+        let email_3 = $(this).find('.email-3').text();
+        let location_tag = $(this).find('.location-tag').text();
+        $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name + ' (' + location_tag+ ')' +'</option>');
        state_counter++;
     });
     
@@ -127,25 +128,28 @@ jQuery(document).ready(function(){
     $('.australia-studio .w-dyn-item').each(function(i,item){
         let name = $(this).find('.name').text();
         let state = $(this).find('.state').text();
-            let email_1 = $(this).find('.email-1').text();
-            let email_2 = $(this).find('.email-2').text();
-            let email_3 = $(this).find('.email-3').text();      
+        let email_1 = $(this).find('.email-1').text();
+        let email_2 = $(this).find('.email-2').text();
+        let email_3 = $(this).find('.email-3').text();
+        let location_tag = $(this).find('.location-tag').text();    
       
-        $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"   value="'+ name +'">'+ name +'</option>');
+        $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"   value="'+ name +'">'+ name + ' (' + location_tag + ')' +'</option>');
     });   
     
     $('.ireland-studios .w-dyn-item').each(function(i,item){
         let name = $(this).find('.name').text();
         let state = $(this).find('.state').text();
-            let email_1 = $(this).find('.email-1').text();
-            let email_2 = $(this).find('.email-2').text();
-            let email_3 = $(this).find('.email-3').text();      
-        $('#contact-studio').append('<option rel="'+ state +'"  data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name +'</option>');
+        let email_1 = $(this).find('.email-1').text();
+        let email_2 = $(this).find('.email-2').text();
+        let email_3 = $(this).find('.email-3').text();
+        let location_tag = $(this).find('.location-tag').text();
+              
+        $('#contact-studio').append('<option rel="'+ state +'"  data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name + ' (' + location_tag + ')' +'</option>');
     });
     
     
     
-      //Form logic
+      //Contact us and Free trial Form logic
     var $supCat = $('#Country'),
         $cat = $("#contact-state"),
         $subcat = $("#contact-studio");     
