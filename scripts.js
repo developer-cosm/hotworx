@@ -121,11 +121,11 @@ jQuery(document).ready(function(){
         let email_3 = $(this).find('.email-3').text();
         let location_tag = $(this).find('.location-tag').text();
         if(location_tag){
-          location_text = ' (' + location_tag + ')';
+          location_text = ' ( ' + location_tag + ' )';
         }else{
           location_text = '';
         } 
-        
+
         $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name + location_text +'</option>');
        state_counter++;
     });
@@ -140,7 +140,7 @@ jQuery(document).ready(function(){
         let location_tag = $(this).find('.location-tag').text();    
 
         if(location_tag){
-          location_text = ' (' + location_tag + ')';
+          location_text = ' ( ' + location_tag + ' )';
         }else{
           location_text = '';
         } 
@@ -157,7 +157,7 @@ jQuery(document).ready(function(){
         let location_tag = $(this).find('.location-tag').text();
         let location_text;
         if(location_tag){
-          location_text = ' (' + location_tag + ')';
+          location_text = ' ( ' + location_tag + ' )';
         }else{
           location_text = '';
         }  
