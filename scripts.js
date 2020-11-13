@@ -114,7 +114,7 @@ jQuery(document).ready(function(){
       let state_counter = 0;
     $('.state-collection .w-dyn-item').each(function(i,item){
         $(this).attr('data-id', state_counter);
-        let name = $(this).find('.name').text();
+        let name = $(this).find('.athrzd_location_name').text();
         let state = $(this).find('.state').text();
         let email_1 = $(this).find('.email-1').text();
         let email_2 = $(this).find('.email-2').text();
@@ -132,7 +132,7 @@ jQuery(document).ready(function(){
     
       
     $('.australia-studio .w-dyn-item').each(function(i,item){
-        let name = $(this).find('.name').text();
+        let name = $(this).find('.athrzd_location_name').text();
         let state = $(this).find('.state').text();
         let email_1 = $(this).find('.email-1').text();
         let email_2 = $(this).find('.email-2').text();
@@ -149,7 +149,7 @@ jQuery(document).ready(function(){
     });   
     
     $('.ireland-studios .w-dyn-item').each(function(i,item){
-        let name = $(this).find('.name').text();
+        let name = $(this).find('.athrzd_location_name').text();
         let state = $(this).find('.state').text();
         let email_1 = $(this).find('.email-1').text();
         let email_2 = $(this).find('.email-2').text();
