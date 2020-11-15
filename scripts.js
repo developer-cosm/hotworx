@@ -116,6 +116,7 @@ jQuery(document).ready(function(){
         $(this).attr('data-id', state_counter);
         let name = $(this).find('.athrzd_location_name').text();
         let state = $(this).find('.state').text();
+        let code = $(this).find('.loc-code').text();
         let email_1 = $(this).find('.email-1').text();
         let email_2 = $(this).find('.email-2').text();
         let email_3 = $(this).find('.email-3').text();
@@ -126,7 +127,7 @@ jQuery(document).ready(function(){
           location_text = '';
         } 
 
-        $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name + location_text +'</option>');
+        $('#contact-studio').append('<option rel="'+ state +'" data-code="'+ code +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name + location_text +'</option>');
        state_counter++;
     });
     
@@ -134,6 +135,7 @@ jQuery(document).ready(function(){
     $('.australia-studio .w-dyn-item').each(function(i,item){
         let name = $(this).find('.athrzd_location_name').text();
         let state = $(this).find('.state').text();
+        let code = $(this).find('.loc-code').text();
         let email_1 = $(this).find('.email-1').text();
         let email_2 = $(this).find('.email-2').text();
         let email_3 = $(this).find('.email-3').text();
@@ -145,12 +147,13 @@ jQuery(document).ready(function(){
           location_text = '';
         } 
       
-        $('#contact-studio').append('<option rel="'+ state +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"   value="'+ name +'">'+ name + location_text +'</option>');
+        $('#contact-studio').append('<option rel="'+ state +'" data-code="'+ code +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"   value="'+ name +'">'+ name + location_text +'</option>');
     });   
     
     $('.ireland-studios .w-dyn-item').each(function(i,item){
         let name = $(this).find('.athrzd_location_name').text();
         let state = $(this).find('.state').text();
+        let code = $(this).find('.loc-code').text();
         let email_1 = $(this).find('.email-1').text();
         let email_2 = $(this).find('.email-2').text();
         let email_3 = $(this).find('.email-3').text();
@@ -161,7 +164,7 @@ jQuery(document).ready(function(){
         }else{
           location_text = '';
         }  
-        $('#contact-studio').append('<option rel="'+ state +'"  data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name + location_text +'</option>');
+        $('#contact-studio').append('<option rel="'+ state +'" data-code="'+ code +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name + location_text +'</option>');
     });
     
     
@@ -209,9 +212,11 @@ jQuery(document).ready(function(){
     let email1 = $(this).find(':selected').data('email1');
     let email2 = $(this).find(':selected').data('email2');
     let email3 = $(this).find(':selected').data('email3');
+    let code = $(this).find(':selected').data('code');
     $('.contact-form-default').append('<input type="hidden" name="email1" class="input_email1" value="'+ email1 +'">');
     $('.contact-form-default').append('<input type="hidden" name="email2" class="input_email2" value="'+ email2 +'">');
     $('.contact-form-default').append('<input type="hidden" name="email3" class="input_email3" value="'+ email3 +'">');
+    $('.contact-form-default').append('<input type="hidden" name="code" class="" value="'+ code +'">');
   })
   //End form logic for contact form and free trial form
   
