@@ -331,17 +331,20 @@ jQuery(document).ready(function(){
           return false;
           $('.loc-sumbit').prop('disabled', true);
       }
-    }  
+    }
+    
+    function check_aus_phone(){
+  
+    }
 
     $("body.Australia .loc-form-phone").focusout(function(){
-
-      if(allnumeric($(this).val())){
+       if(allnumeric($(this).val())){
         //console.log('validated');
         $('.loc-sumbit').prop('disabled', false);
       }else{
         alert('Please input a valid Phone Number');
         $('.loc-sumbit').prop('disabled', true);
-      }
+      } 
     });
 
 
