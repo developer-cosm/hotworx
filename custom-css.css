@@ -1,4 +1,84 @@
-  /*========= Form Placeholder ===========*/
+
+  /*   *{border:1px solid red} */
+  .w-container{max-width:1110px;}
+  .width-1170{max-width:1170px}
+  .width-1190{max-width:1190px}
+  .maxwidth-1366{max-width:1366px; margin-left:auto; margin-right:auto}
+  .home-post-left-col{padding-left:15px !important;}
+  .home-recent-blog .columns-9:hover .home-post-left-col .fade-out {background-image: linear-gradient(90deg, transparent, #000 21%);}
+  p a{display:inline-block; border-bottom:1px solid #ff6f24}
+  .w-row.no-neg-margin{margin-left:0 !important; margin-right:0 !important;}
+  .wrap{width:1110px !important;}
+  .cat-link p{color:#282828}
+  .cat-link .arrow-black{}
+  .cat-link .arrow-orange{display:none}
+  .cat-link .line-holder-black{}
+  .cat-link .line-holder-orange{display:none}
+  .cat-link:hover p{color:#dc531f}
+  .cat-link:hover .arrow-black{display:none}
+  .cat-link:hover .arrow-orange{display:inline-block}
+  .cat-link:hover .line-holder-black{display:none}
+  .cat-link:hover .line-holder-orange{display:block}
+  .content-list{padding-left:15px !important}
+  .content-list li div.bullet-list::before{
+  /*content: url('https://uploads-ssl.webflow.com/5ea4822fd3a80f6c9cc4fdd9/5eb2d87f4e75212ca563ff31_circle.png'); */
+  content: '';
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
+  background: #000;
+  display: inline-block;
+  border-radius: 50%;   
+  }
+  
+  .w-select.no-border{border:none;}
+  .location-country-select{
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  .footer-link div { /*border-bottom:2px solid #1f201f; */ }
+  .footer-link:hover div {
+    /*border-bottom:2px solid red;*/
+  }
+    
+  .w-nav-button.w--open strong{
+    color:#f26922;
+  }
+  
+  img{ max-width:100%; }
+  
+  .w-nav-button .mobile-menu-closed{}
+  .w-nav-button.w--open .mobile-menu-closed{display:none}
+  .w-nav-button .mobile-menu-opened{display:none;}
+  .w-nav-button.w--open .mobile-menu-opened{display:inline-block;}
+  .social_share_link .lottie-wrapper > div > svg:first-child{display:none}
+  .workout-item .h3-title{transition:all .5s ease}
+  .workout-item:hover .h3-title{
+    color:#e25a20;
+  }
+  .workout-item:hover .link-with-arrow{
+    color:#e25a20;
+  }
+  
+    .workout-item:hover .workout-title {
+    font-weight:bold;
+  }
+  
+  
+    .single-workout:hover{
+     background-blend-mode: saturation;
+
+  }
+  a{color:#f26922}
+  
+  .subcat option, .cat option{
+    display:none;
+  }
+
+
+    /*========= Form Placeholder ===========*/
    input.normal-input::-webkit-input-placeholder {
       color: #666;
        opacity:1;
