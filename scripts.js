@@ -257,12 +257,27 @@ jQuery(document).ready(function(){
 
 
   
-  var location_phone = $('.us-studio .location-phone').text();
+  var location_phone = $('.us-studio .us-loc-phone').text();
   if(location_phone){
       location_phone = phoneFormatUsa(location_phone);
-      $('.us-studio .location-phone').text(location_phone); 
+      $('.us-studio .us-loc-phone').text(location_phone); 
+  }
+    
+  var aus_location_phone = $('.us-studio .aus-loc-phone').text();
+  if(aus_location_phone){
+      aus_location_phone = phoneFormatAus(aus_location_phone);
+      $('.us-studio .aus-loc-phone').text(aus_location_phone); 
+  }
+      
+  var ire_location_phone = $('.us-studio .ire-loc-phone').text();
+  if(ire_location_phone){
+      ire_location_phone = phoneFormatAus(ire_location_phone);
+      $('.us-studio .ire-loc-phone').text(ire_location_phone); 
   }
   
+
+
+
   let ireland_phone = $('.ireland-studio .location-phone').text();
   
   if(ireland_phone){
