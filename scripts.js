@@ -289,8 +289,67 @@ jQuery(document).ready(function(){
     $('.ireland-studio .location-phone').text(ireland_phone);
     
   }    
-  
-  
+    //au ph format
+    let single_aus_phone_holder = $('.single-aus-studio .location-phone');
+    let single_aus_phone = single_aus_phone_holder.text();
+    let formatted_single_aus_phone = phoneFormatAus(single_aus_phone);
+    single_aus_phone_holder.text(formatted_single_aus_phone);
+
+
+
+  //US Location phone verification of form
+
+    var phone_no; var validation;
+    function validate_phone(phone_no){
+      if(phone_no.length>0){
+         validation = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/.test(phone_no);
+        if(validation == false){
+            alert('Please enter a valid phone no.');
+          return false;
+        }
+        return true;
+      } 
+    }
+    
+    $("body.US .loc-form-phone").focusout(function(){
+
+      if(validate_phone($(this).val())){
+        console.log('validated');
+      }else{
+        console.log('not validated');
+      }
+    });
+
+    // Aus ph validation
+    function allnumeric(inputtxt){
+
+      validation = /^[0-9]+$/.test(inputtxt);
+      if(validation && inputtxt.length >= 10 && inputtxt.length<=12){
+          return true;
+          $('.loc-sumbit').prop('disabled', false);
+      }else {
+          return false;
+          $('.loc-sumbit').prop('disabled', true);
+      }
+    }  
+
+    $("body.Australia .loc-form-phone").focusout(function(){
+
+      if(allnumeric($(this).val())){
+        //console.log('validated');
+        $('.loc-sumbit').prop('disabled', false);
+      }else{
+        alert('Please input a valid Phone Number');
+        $('.loc-sumbit').prop('disabled', true);
+      }
+    });
+
+
+
+
+
+
+
   
 })// Document ready
 
