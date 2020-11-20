@@ -182,12 +182,34 @@ jQuery(document).ready(function(){
     $supCat.on("change",function(){
             //alert('changed');
       //$subcat.find("option").hide();
-      $subcat.find("option").unwrap('<span>');
+      //$subcat.find("option").unwrap('<span>');
+      $subcat.find("option").forEach(function(idx,item){
+        console.log(idx);
+      })
+
+      $subcat.find("option").each(function(idx,item){
+        if($(this).parent().is('span')){
+            $(this).unwrap();
+            //console.log('span parent');
+        }
+      })
+
+
+
+
       $subcat.find("option").not(':first').wrap('<span>');
       $subcat.prop('selectedIndex',0);
       $subcat.prop("disabled",true);
       
       //$cat.find("option").hide();
+      $cat.find("option").each(function(idx,item){
+        if($(this).parent().is('span')){
+            $(this).unwrap();
+            //console.log('span parent');
+        }
+      })
+
+      
       $cat.find("option").not(':first').wrap('<span>');
       $cat.prop('selectedIndex',0);
       $cat.prop("disabled",false);
