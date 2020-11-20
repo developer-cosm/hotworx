@@ -187,7 +187,7 @@ jQuery(document).ready(function(){
       $subcat.prop("disabled",true);
       
       //$cat.find("option").hide();
-      $cat.find("option").wrap('<span>');
+      $cat.find("option").not(':first').wrap('<span>');
       $cat.prop('selectedIndex',0);
       $cat.prop("disabled",false);
       var _rel = $(this).val();
