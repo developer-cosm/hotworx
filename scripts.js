@@ -183,9 +183,6 @@ jQuery(document).ready(function(){
             //alert('changed');
       //$subcat.find("option").hide();
       //$subcat.find("option").unwrap('<span>');
-      $subcat.find("option").forEach(function(idx,item){
-        console.log(idx);
-      })
 
       $subcat.find("option").each(function(idx,item){
         if($(this).parent().is('span')){
@@ -209,7 +206,7 @@ jQuery(document).ready(function(){
         }
       })
 
-      
+
       $cat.find("option").not(':first').wrap('<span>');
       $cat.prop('selectedIndex',0);
       $cat.prop("disabled",false);
