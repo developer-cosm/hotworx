@@ -379,7 +379,9 @@ jQuery(document).ready(function(){
     });
 
     //scrollbar
-     $("ul.results").mCustomScrollbar();
+     $("ul.results").mCustomScrollbar({
+        axis:"y"
+     });
 
 
 
