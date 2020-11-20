@@ -177,10 +177,12 @@ jQuery(document).ready(function(){
       $cat.prop("disabled", true);
       $subcat.prop("disabled", true);
       //$('#contact-studio').val('HOTWORX- Bartlett, TN');
+
+
     $supCat.on("change",function(){
             //alert('changed');
       //$subcat.find("option").hide();
-      $subcat.find("option").wrap('<span>');
+      $subcat.find("option").not(':first').wrap('<span>');
       $subcat.prop('selectedIndex',0);
       $subcat.prop("disabled",true);
       
