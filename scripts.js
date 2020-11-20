@@ -187,7 +187,7 @@ jQuery(document).ready(function(){
       $cat.prop('selectedIndex',0);
       $cat.prop("disabled",false);
       var _rel = $(this).val();
-      $cat.find("[rel~='"+_rel+"']").show();
+      $cat.find("[rel=='"+_rel+"']").show();
 
    });
 
@@ -198,7 +198,7 @@ jQuery(document).ready(function(){
     $subcat.prop('selectedIndex',0);
     $subcat.prop("disabled",false);
     var rel_cat = $(this).val();
-    $subcat.find("[rel~='"+rel_cat+"']").show();
+    $subcat.find("[rel=='"+rel_cat+"']").show();
 
 
   });
