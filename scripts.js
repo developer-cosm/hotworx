@@ -183,7 +183,7 @@ jQuery(document).ready(function(){
             //alert('changed');
       //$subcat.find("option").hide();
       //$subcat.find("option").unwrap('<span>');
-/*
+
       $subcat.find("option").each(function(idx,item){
         if($(this).parent().is('span')){
             $(this).unwrap();
@@ -191,7 +191,8 @@ jQuery(document).ready(function(){
         }
       })
       $subcat.find("option").not(':first').wrap('<span>');
-*/
+    
+
       $subcat.prop('selectedIndex',0);
       $subcat.prop("disabled",true);
       
@@ -377,6 +378,9 @@ jQuery(document).ready(function(){
       } 
     });
 
+    //scrollbar
+     $("ul.results").mCustomScrollbar();
+
 
 
 
@@ -385,4 +389,9 @@ jQuery(document).ready(function(){
 
   
 })// Document ready
+
+
+
+
+
 
