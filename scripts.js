@@ -182,6 +182,7 @@ jQuery(document).ready(function(){
     $supCat.on("change",function(){
             //alert('changed');
       //$subcat.find("option").hide();
+      $subcat.find("option").unwrap('<span>');
       $subcat.find("option").not(':first').wrap('<span>');
       $subcat.prop('selectedIndex',0);
       $subcat.prop("disabled",true);
