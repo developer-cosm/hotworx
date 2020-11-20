@@ -190,10 +190,6 @@ jQuery(document).ready(function(){
             //console.log('span parent');
         }
       })
-
-
-
-
       $subcat.find("option").not(':first').wrap('<span>');
       $subcat.prop('selectedIndex',0);
       $subcat.prop("disabled",true);
@@ -220,12 +216,20 @@ jQuery(document).ready(function(){
   $cat.on("change",function(){
 
     //$subcat.find("option").hide();
+
+      $subcat.find("option").each(function(idx,item){
+        if($(this).parent().is('span')){
+            $(this).unwrap();
+        }
+      })
+      $subcat.find("option").not(':first').wrap('<span>');
+
     $subcat.find("option").wrap('<span>');
     $subcat.prop('selectedIndex',0);
     $subcat.prop("disabled",false);
     var rel_cat = $(this).val();
-    $subcat.find("[rel~='"+rel_cat+"']").show();
-    //$subcat.find("[rel~='"+rel_cat+"']").unwrap();
+    //$subcat.find("[rel~='"+rel_cat+"']").show();
+    $subcat.find("span option[rel~='"+rel_cat+"']").unwrap();
 
 
   });
