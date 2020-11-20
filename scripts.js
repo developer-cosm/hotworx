@@ -192,7 +192,7 @@ jQuery(document).ready(function(){
       $cat.prop("disabled",false);
       var _rel = $(this).val();
       //$cat.find("[rel~='"+_rel+"']").show();
-      $cat.find("[rel~='"+_rel+"']").unwrap();
+      $cat.find("span option[rel~='"+_rel+"']").unwrap();
 
    });
 
