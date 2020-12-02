@@ -283,7 +283,7 @@ jQuery(document).ready(function(){
                    
                     console.log('state -' + $this.val());
                     console.log('item -' + idx);
-                   exit;
+                    $('#contact-state option[value='+$this.val()+ '] ');
                 }
             });
 
