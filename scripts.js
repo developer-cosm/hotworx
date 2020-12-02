@@ -282,6 +282,7 @@ jQuery(document).ready(function(){
         var locCode=getCookie("locCode");
 
         if (locCountry) {
+            alert(locCountry);
 
             $cat.prop("disabled",false);
             $subcat.prop("disabled",false);
