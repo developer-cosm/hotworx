@@ -291,7 +291,7 @@ jQuery(document).ready(function(){
                 var $this = $(this);
                 if($this.val() == locCountry){
                    
-                    $('#contact-state option[value="'+ locCountry +'"]').prop("selected", true);
+                    $('#Country option[value="'+ locCountry +'"]').prop("selected", true);
                 }
             });
 
