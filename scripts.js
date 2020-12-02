@@ -283,7 +283,8 @@ jQuery(document).ready(function(){
                    
                     console.log('state -' + $this.val());
                     console.log('item -' + idx);
-                    $('#contact-state option[value='+$this.val()+ '] ');
+                    //$('#contact-state option[value='+ $this.val() + '] ');
+                    $('#contact-state option[value="+ locState +"]').prop("selected", true);
                 }
             });
 
