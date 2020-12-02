@@ -277,7 +277,7 @@ jQuery(document).ready(function(){
             $cat.prop("disabled",false);
             $subcat.prop("disabled",false);
 
-            $($cat + 'option').each(function(){
+            $("#contact-state option").each(function(){
                 var $this = $(this);
                 if($this.val() == locState){
                    alert('compared');
