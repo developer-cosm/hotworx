@@ -271,6 +271,13 @@ jQuery(document).ready(function(){
     function checkCookie() {
 
         var locCountry=getCookie("locCountry");
+        if(locCountry == 'USA'){
+            locCountry = "US";
+        }else if(locCountry == 'Ireland'){
+            locCountry = 'IR'
+        }else{
+            locCountry = 'AU'
+        }
         var locState=getCookie("locState");
         var locCode=getCookie("locCode");
 
@@ -278,6 +285,14 @@ jQuery(document).ready(function(){
 
             $cat.prop("disabled",false);
             $subcat.prop("disabled",false);
+
+            $("#Country option").each(function(idx,item){
+                var $this = $(this);
+                if($this.val() == locCountry){
+                   
+                    $('#contact-state option[value="'+ locCountry +'"]').prop("selected", true);
+                }
+            });
 
             $("#contact-state option").each(function(idx,item){
                 var $this = $(this);
@@ -292,8 +307,7 @@ jQuery(document).ready(function(){
                 //console.log($this.attr('data-code'));
                 
                 if($this.attr('data-code') == locCode){
-                   console.log(idx);
-                    //$('#contact-state option[value="'+ locState +'"]').prop("selected", true);
+                    //console.log(idx);
                     $('#contact-studio option').eq(idx).prop('selected', true);
                 }
                 
