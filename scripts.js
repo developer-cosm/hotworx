@@ -277,10 +277,12 @@ jQuery(document).ready(function(){
             $cat.prop("disabled",false);
             $subcat.prop("disabled",false);
 
-            $("#contact-state option").each(function(){
+            $("#contact-state option").each(function(idx,item){
                 var $this = $(this);
                 if($this.val() == locState){
-                   alert('compared');
+                   
+                    console.log('state -' + $this.val());
+                    console.log('item -' + idx);
                    exit;
                 }
             });
