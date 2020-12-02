@@ -287,7 +287,7 @@ jQuery(document).ready(function(){
 
             $("#contact-studio option").each(function(idx,item){
                 var $this = $(this);
-                console.log($htis.attr('code').val())
+                console.log($this.attr('code').val())
                 /*
                 if($this.val() == locState){
                    
