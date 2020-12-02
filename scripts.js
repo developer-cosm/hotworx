@@ -224,7 +224,7 @@ jQuery(document).ready(function(){
             $(this).unwrap();
         }
       })
-      $subcat.find("option").not(':first').wrap('<span>');
+    $subcat.find("option").not(':first').wrap('<span>');
     $subcat.prop('selectedIndex',0);
     $subcat.prop("disabled",false);
     var rel_cat = $(this).val();
@@ -249,6 +249,62 @@ jQuery(document).ready(function(){
     $('.contact-form-default').append('<input type="hidden" name="email3" class="input_email3" value="'+ email3 +'">');
     $('.contact-form-default').append('<input type="hidden" name="code" class="" value="'+ code +'">');
   })
+
+
+  // Get Cookies if they are set for Single Location Page
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function checkCookie() {
+        var locCountry=getCookie("locCountry");
+        var locState=getCookie("locState");
+        var locCode=getCookie("locCode");
+        if (locCountry) {
+
+            $cat.prop("disabled",false);
+            $subcat.prop("disabled",false);
+
+            $($cat + 'option').each(function(){
+                var $this = $(this);
+                if($this.val() == locState){
+                   alert('compared');
+                   exit;
+                }
+            });
+
+
+
+        } else {
+
+        }
+    }
+
+  checkCookie();    
+
+
+
+
+
+
+
+
+
+
+
+
   //End form logic for contact form and free trial form
   
   //Single Location Phone format
@@ -377,11 +433,6 @@ jQuery(document).ready(function(){
         $('.loc-sumbit').prop('disabled', true);
       } 
     });
-
-    //scrollbar
-     // $("ul.results").mCustomScrollbar({
-     //    axis:"y"
-     // });
 
 
 
