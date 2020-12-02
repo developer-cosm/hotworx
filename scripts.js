@@ -269,9 +269,11 @@ jQuery(document).ready(function(){
     }
 
     function checkCookie() {
+
         var locCountry=getCookie("locCountry");
         var locState=getCookie("locState");
         var locCode=getCookie("locCode");
+
         if (locCountry) {
 
             $cat.prop("disabled",false);
@@ -287,16 +289,13 @@ jQuery(document).ready(function(){
 
             $("#contact-studio option").each(function(idx,item){
                 var $this = $(this);
-                console.log($this.attr('data-code'));
-                /*
-                if($this.val() == locState){
-                   
-                    console.log('state -' + $this.val());
-                    console.log('item -' + idx);
-                    //$('#contact-state option[value='+ $this.val() + '] ');
-                    $('#contact-state option[value="'+ locState +'"]').prop("selected", true);
+                //console.log($this.attr('data-code'));
+                
+                if($this.attr('data-code') == locCode){
+                   console.log(idx);
+                    //$('#contact-state option[value="'+ locState +'"]').prop("selected", true);
                 }
-                */
+                
             });
 
 
