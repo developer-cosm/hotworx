@@ -294,7 +294,7 @@ jQuery(document).ready(function(){
                 if($this.attr('data-code') == locCode){
                    console.log(idx);
                     //$('#contact-state option[value="'+ locState +'"]').prop("selected", true);
-                    $('#contact-state option').eq(idx).prop('selected', true);
+                    $('#contact-studio option').eq(idx).prop('selected', true);
                 }
                 
             });
