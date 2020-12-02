@@ -281,11 +281,22 @@ jQuery(document).ready(function(){
                 var $this = $(this);
                 if($this.val() == locState){
                    
+                    $('#contact-state option[value="'+ locState +'"]').prop("selected", true);
+                }
+            });
+
+            $("#contact-studio option").each(function(idx,item){
+                var $this = $(this);
+                console.log($htis.attr('code').val())
+                /*
+                if($this.val() == locState){
+                   
                     console.log('state -' + $this.val());
                     console.log('item -' + idx);
                     //$('#contact-state option[value='+ $this.val() + '] ');
                     $('#contact-state option[value="'+ locState +'"]').prop("selected", true);
                 }
+                */
             });
 
 
