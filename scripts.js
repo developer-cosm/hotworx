@@ -238,6 +238,7 @@ jQuery(document).ready(function(){
     $('.input_email1').remove();
     $('.input_email2').remove();
     $('.input_email3').remove();
+    $('.studio_code').remove();
     
       //console.log($(this).find(':selected').data('email1'));
     let email1 = $(this).find(':selected').data('email1');
@@ -247,7 +248,7 @@ jQuery(document).ready(function(){
     $('.contact-form-default').append('<input type="hidden" name="email1" class="input_email1" value="'+ email1 +'">');
     $('.contact-form-default').append('<input type="hidden" name="email2" class="input_email2" value="'+ email2 +'">');
     $('.contact-form-default').append('<input type="hidden" name="email3" class="input_email3" value="'+ email3 +'">');
-    $('.contact-form-default').append('<input type="hidden" name="code" class="" value="'+ code +'">');
+    $('.contact-form-default').append('<input type="hidden" name="code" class="studio_code" value="'+ code +'">');
   })
 
 
