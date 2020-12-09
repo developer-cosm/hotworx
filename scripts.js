@@ -280,6 +280,9 @@ jQuery(document).ready(function(){
         }
         var locState=getCookie("locState");
         var locCode=getCookie("locCode");
+        var email_1=getCookie("email_1");
+        var email_2=getCookie("email_2");
+        var email_3=getCookie("email_3");
 
         if (locCountry) {
 
@@ -312,8 +315,12 @@ jQuery(document).ready(function(){
                 }
                 
             });
+            // Setting hidden inputs at contact form
 
-
+            $('.contact-form-default').append('<input type="hidden" name="email1" class="input_email1" value="'+ email_1 +'">');
+            $('.contact-form-default').append('<input type="hidden" name="email2" class="input_email2" value="'+ email_2 +'">');
+            $('.contact-form-default').append('<input type="hidden" name="email3" class="input_email3" value="'+ email_3 +'">');
+            $('.contact-form-default').append('<input type="hidden" name="code" class="" value="'+ locCode +'">');
 
         } else {
 
