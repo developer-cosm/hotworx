@@ -321,7 +321,7 @@ jQuery(document).ready(function(){
             $('.contact-form-default').append('<input type="hidden" name="email1" class="input_email1" value="'+ email_1 +'">');
             $('.contact-form-default').append('<input type="hidden" name="email2" class="input_email2" value="'+ email_2 +'">');
             $('.contact-form-default').append('<input type="hidden" name="email3" class="input_email3" value="'+ email_3 +'">');
-            $('.contact-form-default').append('<input type="hidden" name="code" class="" value="'+ locCode +'">');
+            $('.contact-form-default').append('<input type="hidden" name="code" class="studio_code" value="'+ locCode +'">');
 
         } else {
 
