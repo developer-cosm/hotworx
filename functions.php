@@ -14,7 +14,7 @@ function makeApiCall($endpoint, $type, $params)
 {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Authorization: Bearer a9b5f876b766f8f329f916eab857eb0d6c011096d8c8164406e386a6ef1af567',
+        'Authorization: Bearer bdb47ad338896ff91f7d7a64236a91640ecf45826e9cb24f604d69b11ed9eb87',
         'accept-version: 1.0.0',
         'cache-control: mpublic',
         'X-Requested-With: x-requested-with, x-requested-by'
