@@ -470,7 +470,91 @@ jQuery(document).ready(function(){
       } 
     });
 
+  //Franchise fee text based on country selecion 
+  $('#Country').on('change', function(){
+    //alert(this.value);
+    if(this.value == 'United States'){
+        $('.aus-frnchs-rqrmnt').css('display','none');
+        $('.glbl-frnchs-rqrmnt').css('display','none');
+      $('.us-frnchs-rqrmnt').css('display','block');
+    }else if(this.value == 'Australia'){
+        $('.glbl-frnchs-rqrmnt').css('display','none');
+      $('.us-frnchs-rqrmnt').css('display','none');      
+      $('.aus-frnchs-rqrmnt').css('display','block');
+    }else{
+      $('.us-frnchs-rqrmnt').css('display','none');      
+      $('.aus-frnchs-rqrmnt').css('display','none');      
+      $('.glbl-frnchs-rqrmnt').css('display','block');
+    }
+  })
+  
+  //Get Url params
+  var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1),
+          sURLVariables = sPageURL.split('&'),
+          sParameterName,
+          i;
 
+      for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+
+          if (sParameterName[0] === sParam) {
+              return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+          }
+      }
+  };
+  var source = getUrlParameter('source');
+  var utm_source = getUrlParameter('utm_source');
+  //console.log(source + '-'+ utm_source);
+  //Setting Cookie from url params
+  if(source || utm_source){
+    setCookie("source", source, 365);
+    setCookie("utm_source", utm_source, 365);
+  }else{
+    
+  }
+  
+  function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000)); // 1 day
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+ //======== Adding hidden campaign field to forms
+  
+  function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+  }
+
+  function param_checkCookie() {
+      let cookie_source = getCookie("source");
+        let cookie_utm_source = getCookie("utm_source");
+        //console.log(source + '-' + utm_source);
+      if (cookie_source || cookie_utm_source ) {
+        $('.contact-form-default').append(`<input type="hidden" name="Source" value=${cookie_source}>`);
+            $('.contact-form-default').append(`<input type="hidden" name="Utm Source" value=${cookie_utm_source}>`);
+            $('.loc-subs-form').append(`<input type="hidden" name="Source" value=${cookie_source}>`);
+            $('.loc-subs-form').append(`<input type="hidden" name="Utm Source" value=${cookie_utm_source}>`);
+            $('.franchise-form').append(`<input type="hidden" name="Source" value=${cookie_source}>`);
+            $('.franchise-form').append(`<input type="hidden" name="Utm Source" value=${cookie_utm_source}>`);          
+      }
+  }
+
+  param_checkCookie(); 
+  // Cookie end
 
 
 
