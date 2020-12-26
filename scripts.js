@@ -127,7 +127,7 @@ jQuery(document).ready(function(){
           location_text = '';
         } 
 
-        $('#contact-studio').append('<option rel="'+ state +'" data-code="'+ code +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name +'</option>');
+        $('#contact-studio').append('<option rel="'+ state +'" data-code="'+ code +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name+location_text +'</option>');
        state_counter++;
     });
     
