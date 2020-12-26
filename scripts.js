@@ -513,7 +513,6 @@ jQuery(document).ready(function(){
     setCookie("source", source, 365);
   }else if(utm_source){
     setCookie("utm_source", utm_source, 365);
-  } 
   }else{
     
   }
