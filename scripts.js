@@ -127,11 +127,11 @@ jQuery(document).ready(function(){
           location_text = '';
         } 
 
-        $('#contact-studio').append('<option rel="'+ state +'" data-code="'+ code +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name +' '+location_text +'</option>');
+        $('#contact-studio').append('<option rel="'+ state +'" data-code="'+ code +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name +'</option>');
        state_counter++;
     });
     
-      
+    /*
     $('.australia-studio .w-dyn-item').each(function(i,item){
         let name = $(this).find('.athrzd_location_name').text();
         let state = $(this).find('.state').text();
@@ -166,6 +166,8 @@ jQuery(document).ready(function(){
         }  
         $('#contact-studio').append('<option rel="'+ state +'" data-code="'+ code +'" data-email1="'+ email_1 +'" data-email2="'+ email_2 +'" data-email3="'+ email_3 +'"  value="'+ name +'">'+ name +' '+ location_text +'</option>');
     });
+
+    */
     
     
     
@@ -507,9 +509,11 @@ jQuery(document).ready(function(){
   var utm_source = getUrlParameter('utm_source');
   //console.log(source + '-'+ utm_source);
   //Setting Cookie from url params
-  if(source || utm_source){
+  if(source ){
     setCookie("source", source, 365);
+  }else if(utm_source){
     setCookie("utm_source", utm_source, 365);
+  } 
   }else{
     
   }
@@ -541,7 +545,7 @@ jQuery(document).ready(function(){
 
   function param_checkCookie() {
       let cookie_source = getCookie("source");
-        let cookie_utm_source = getCookie("utm_source");
+      let cookie_utm_source = getCookie("utm_source");
         //console.log(source + '-' + utm_source);
       if (cookie_source || cookie_utm_source ) {
         $('.contact-form-default').append(`<input type="hidden" name="Source" value=${cookie_source}>`);
