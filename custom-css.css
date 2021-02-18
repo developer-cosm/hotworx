@@ -114,3 +114,99 @@
       /* IE 10+ */
       color: #666;
   }
+
+
+  
+
+  /*====  Blog Page Post list masonary ====*/
+  /*
+  .blog-post-list, .news-post-list{
+    columns:150px 2;
+  }
+  .blog-post-list .blog-page-post, .news-post-list .blog-page-post{break-inside:avoid-column; display:inline-block; margin:20px 0;}
+  .news-featured-post-text{padding-left:15px !important;}
+  .content-list{list-style:none;}
+  
+ */
+  .blog-post-list, .news-post-list{
+      -webkit-column-count: 2;
+  -moz-column-count:2;
+  column-count: 2;
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
+  column-gap: 1em;
+    -webkit-perspective:1;
+  
+  }
+  .blog-post-list .blog-page-post, .news-post-list .blog-page-post{
+  width:100%;
+    padding-top:18px;
+    break-inside:avoid-column;
+  }
+  
+  .vi-item-inner{
+    background-color:#fff;
+    background-blend-mode:luminosity;
+  }
+  .news-archive-summary img{display:none;}
+  
+  /* ====== VI Instructors Page ======*/
+  .page-vi-instructors .vi-item-inner{
+    background-size:120%;
+    background-position: 50% 0%;
+    transition: all 1s ease;
+  }
+  
+  .page-vi-instructors .vi-item-inner:hover{
+    background-size:100%;
+  }
+
+  .testimonial-text p{line-height:28px;}
+  .single-news-template .single-post-col strong{display:block; margin-top:15px}
+  .brand-3{
+    height: 57px;
+    margin-left: 0px;
+    padding-left: 20px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.staffed-hours p{margin-bottom:0;}
+.mobile-cta-bottom .footer-cta-open-location, .mobile-cta-bottom .footer-cta-onboarding, .mobile-cta-bottom .footer-cta-presale,
+.mobile-cta-bottom .footer-cta-franchising , .mobile-cta-bottom .footer-cta-map{display:none !important;}
+
+  .home-workout-section, .home-high-intensity-workout{
+    background-image:url('https://chiguald.sirv.com/Hotworx/Home%20Page/GrungeTexture_Corner.png?format=webp');
+    background-size:cover;
+    background-position:0px 0px;
+  
+  }
+  .home-recent-blog{
+    background-image:url('https://chiguald.sirv.com/Hotworx/Home%20Page/opposite-texture.png?format=webp');
+    background-size:cover;
+    background-position:0px 0px;  
+  }
+  
+  /*
+  .home-hero-slide.slide.slide1{
+    background-image:url('');
+    background-size:cover;
+  }
+  */
+ .screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
+.screenreader-text:focus {
+  color: black;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+}
+  
