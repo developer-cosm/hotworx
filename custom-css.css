@@ -175,6 +175,12 @@
 .staffed-hours p{margin-bottom:0;}
 .mobile-cta-bottom .footer-cta-open-location, .mobile-cta-bottom .footer-cta-onboarding, .mobile-cta-bottom .footer-cta-presale,
 .mobile-cta-bottom .footer-cta-franchising , .mobile-cta-bottom .footer-cta-map{display:none !important;}
+body.Pre-Marketing .nav-link.highlighted-link.mobile-footer-cta.footer-cta-default{
+  display:none !important;
+}
+body.Pre-Marketing .nav-link.highlighted-link.mobile-footer-cta.footer-cta-onboarding{
+  display: block !important;
+}
 
   .home-workout-section, .home-high-intensity-workout{
     background-image:url('https://chiguald.sirv.com/Hotworx/Home%20Page/GrungeTexture_Corner.png?format=webp');
