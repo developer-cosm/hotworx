@@ -559,6 +559,30 @@ jQuery(document).ready(function(){
   param_checkCookie(); 
   // Cookie end
 
+  //Footer subscription email validation
+    function validate_email(email){
+        if(email.length>0){
+            validation_email = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email);
+            if(validation_email == false){
+                return false;
+            }
+            return true;
+        } 
+    }  
+  
+  
+    $('.footer-subscription .subs-submit').click(function(e){
+        var email = $('.footer-subscription .email-field').val();
+        //console.log(email);
+
+        if(validate_email(email)){
+            //alert('Submitted');
+        }else{
+            e.preventDefault();
+            alert('Please enter a valid email address.');
+        }
+
+    });
 
 
 
