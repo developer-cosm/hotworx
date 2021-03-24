@@ -445,6 +445,8 @@ jQuery(document).ready(function(){
       }
     });
 
+    $('body.contact-page ')
+
     // Aus ph validation
     function allnumeric(inputtxt){
 
@@ -591,7 +593,16 @@ jQuery(document).ready(function(){
             //alert('color changed');
             $('#footer-subs-errors').html('Subscribed successfully.')
         }        
-      });    
+      });
+
+        //locations page search result count for screen readers
+          $('.locations-map #pac-input').focusout(function(){
+            setTimeout(function(){
+              let resCount = $('.results li').length;
+              $('.result_message').html(`${resCount} results found`);         
+
+            }, 1500)
+          });
 
 
   
