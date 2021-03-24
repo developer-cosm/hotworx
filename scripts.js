@@ -584,7 +584,14 @@ jQuery(document).ready(function(){
 
     });
 
-
+    //aria lable for screen readers on footer subscription
+      $('#footer .w-form-done').attrchange({
+        trackValues: true,
+        callback: function (event) {
+            //alert('color changed');
+            $('#footer-subs-errors').html('Subscribed successfully.')
+        }        
+      });    
 
 
   
