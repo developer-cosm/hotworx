@@ -586,26 +586,43 @@ jQuery(document).ready(function(){
 
     });
 
-    //aria lable for screen readers on footer subscription
+    //alert for screen readers on footer subscription
       $('#footer .w-form-done').attrchange({
         trackValues: true,
         callback: function (event) {
             //alert('color changed');
-            $('#footer-subs-errors').html('Subscribed successfully.')
+            $('#footer-subs-errors').html('Subscribed successfully.');
         }        
       });
 
-    //aria lable for screen readers on VI application
+    //alert for screen readers on VI application
       $('.vi-application .w-form-done').attrchange({
         trackValues: true,
         callback: function (event) {
             //alert('color changed');
-            $('#wf-form-Virtual-Instructor-Form #errors').html('Application sent successfully.')
+            $('#wf-form-Virtual-Instructor-Form #errors').html('Application sent successfully.');
+        }        
+      });
+
+    //alert for screen readers on news subscription
+      $('.subscription .w-form-done').attrchange({
+        trackValues: true,
+        callback: function (event) {
+            //alert('color changed');
+            $('#wf-form-NEWS-SUBSCRIPTION #errors').html('Subscribed successfully.');
+        }        
+      });
+    //alert for screen readers on blog subscription
+      $('.subscription .w-form-done').attrchange({
+        trackValues: true,
+        callback: function (event) {
+            //alert('color changed');
+            $('#wf-form-BLOG-SUBSCRIPTION #errors').html('Subscribed successfully.');
         }        
       });
 
 
-      
+
 
         //locations page search result count for screen readers
           $('.locations-map #pac-input').focusout(function(){
