@@ -595,6 +595,15 @@ jQuery(document).ready(function(){
         }        
       });
 
+    //aria lable for screen readers on VI application
+      $('#wf-form-Virtual-Instructor-Form .w-form-done').attrchange({
+        trackValues: true,
+        callback: function (event) {
+            //alert('color changed');
+            $('#errors').html('Application sent successfully.')
+        }        
+      });
+
         //locations page search result count for screen readers
           $('.locations-map #pac-input').focusout(function(){
             setTimeout(function(){
