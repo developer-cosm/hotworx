@@ -278,7 +278,7 @@ jQuery(document).ready(function(){
             locCountry = "US";
         }else if(locCountry == 'Ireland'){
             locCountry = 'IR'
-        }else{
+        }else if(locCountry == 'Australia'){
             locCountry = 'AU'
         }
         var locState=getCookie("locState");
@@ -601,6 +601,7 @@ jQuery(document).ready(function(){
         callback: function (event) {
             //alert('color changed');
             $('#wf-form-Virtual-Instructor-Form #errors').html('Application sent successfully.');
+            $('.vi-application .w-form-done').focus();
         }        
       });
 
@@ -610,6 +611,7 @@ jQuery(document).ready(function(){
         callback: function (event) {
             //alert('color changed');
             $('#wf-form-NEWS-SUBSCRIPTION #errors').html('Subscribed successfully.');
+
         }        
       });
     //alert for screen readers on blog subscription
@@ -620,6 +622,7 @@ jQuery(document).ready(function(){
             $('#wf-form-BLOG-SUBSCRIPTION #errors').html('Subscribed successfully.');
         }        
       });
+
 
 
 
