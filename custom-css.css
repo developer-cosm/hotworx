@@ -115,6 +115,26 @@
       color: #666;
   }
 
+  /*========= Footer Subscription Form Placeholder ===========*/
+   .footer-subscription .email-field::-webkit-input-placeholder {
+      color: #6E6E6E;
+      opacity:1;
+  }
+  .footer-subscription .email-field:-moz-placeholder {
+      /* FF 4-18 */
+      color: #6E6E6E;
+      opacity:1;
+  }
+  .footer-subscription .email-field::-moz-placeholder {
+      /* FF 19+ */
+      color: #6E6E6E;
+      opacity:1;
+  }
+  .footer-subscription .email-field:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #6E6E6E;
+      opacity:1;
+  }
 
   
 
