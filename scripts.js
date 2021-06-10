@@ -104,7 +104,7 @@ jQuery(document).ready(function(){
       <option rel="US" value="WV" >West Virginia</option>
       <option rel="US" value="WI" >Wisconsin</option>
       <option rel="US" value="WY" >Wyoming</option>
-      <option rel="AU" value="VIC" >Victoria</option>
+      <option rel="AU" value="VICTORIA" >Victoria</option>
       <option rel="IR" value="GY" >Galway</option>`);   
   
 
