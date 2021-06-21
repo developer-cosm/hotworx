@@ -6,7 +6,7 @@
   .maxwidth-1366{max-width:1366px; margin-left:auto; margin-right:auto}
   .home-post-left-col{padding-left:15px !important;}
   .home-recent-blog .columns-9:hover .home-post-left-col .fade-out {background-image: linear-gradient(90deg, transparent, #000 21%);}
-  p a{display:inline-block; border-bottom:1px solid #C64A0C; color:#C64A0C;}
+  p a{display:inline-block; border-bottom:1px solid #f26922; color:#f26922;}
   li a{ color:#C64A0C;}
   .w-row.no-neg-margin{margin-left:0 !important; margin-right:0 !important;}
   .wrap{width:1110px !important;}
@@ -184,6 +184,9 @@
 
   .testimonial-text p{line-height:28px;}
   .single-news-template .single-post-col strong{display:block; margin-top:15px}
+  .single-news-template .single-post-col p a strong{
+    margin-top: 0;
+  }
   .brand-3{
     height: 57px;
     margin-left: 0px;
