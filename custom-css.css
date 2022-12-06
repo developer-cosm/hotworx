@@ -207,13 +207,13 @@ body.Pre-Marketing .nav-link.highlighted-link.mobile-footer-cta.footer-cta-onboa
 }
 
   .home-workout-section, .home-high-intensity-workout{
-    background-image:url('https://chiguald.sirv.com/Hotworx/Home%20Page/GrungeTexture_Corner.png?format=webp');
+    /* background-image:url('https://chiguald.sirv.com/Hotworx/Home%20Page/GrungeTexture_Corner.png?format=webp'); */
     background-size:cover;
     background-position:0px 0px;
   
   }
   .home-recent-blog{
-    background-image:url('https://chiguald.sirv.com/Hotworx/Home%20Page/opposite-texture.png?format=webp');
+    /* background-image:url('https://chiguald.sirv.com/Hotworx/Home%20Page/opposite-texture.png?format=webp'); */
     background-size:cover;
     background-position:0px 0px;  
   }
